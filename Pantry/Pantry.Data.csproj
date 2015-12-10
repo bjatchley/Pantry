@@ -54,13 +54,17 @@
     <Compile Include="Migrations\201512082019502_RemoveManyToManyRecipeAccount.Designer.cs">
       <DependentUpon>201512082019502_RemoveManyToManyRecipeAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512102123165_VirtualAddition.cs" />
+    <Compile Include="Migrations\201512102123165_VirtualAddition.Designer.cs">
+      <DependentUpon>201512102123165_VirtualAddition.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Account.cs" />
-    <Compile Include="Models\AccountIngredient.cs" />
-    <Compile Include="Models\Ingredient.cs" />
-    <Compile Include="Models\PantryContext.cs" />
-    <Compile Include="Models\Recipe.cs" />
-    <Compile Include="Models\RecipeIngredient.cs" />
+    <Compile Include="DataModels\Account.cs" />
+    <Compile Include="DataModels\AccountIngredient.cs" />
+    <Compile Include="DataModels\Ingredient.cs" />
+    <Compile Include="DataModels\PantryContext.cs" />
+    <Compile Include="DataModels\Recipe.cs" />
+    <Compile Include="DataModels\RecipeIngredient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512082019502_RemoveManyToManyRecipeAccount.resx">
       <DependentUpon>201512082019502_RemoveManyToManyRecipeAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512102123165_VirtualAddition.resx">
+      <DependentUpon>201512102123165_VirtualAddition.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

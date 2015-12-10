@@ -12,7 +12,7 @@ namespace Pantry.Data.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
-        public ICollection<Recipe> Recipes { get; set; }
-        public ICollection<AccountIngredient> AccountIngredients { get; set; }
+        public virtual ICollection<Recipe> Recipes { get; set; }
+        public virtual ICollection<AccountIngredient> AccountIngredients { get; set; }
     }
 }

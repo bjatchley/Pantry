@@ -14,7 +14,7 @@ namespace Pantry.Data.Models
         public double CaloriesPerMilliliter { get; set; } 
         public double Density { get; set; }
         public bool IsDry { get; set; }
-        public ICollection<AccountIngredient> AccountIngredients { get; set; }
-        public ICollection<RecipeIngredient> RecipeIngredients { get; set; }
+        public virtual ICollection<AccountIngredient> AccountIngredients { get; set; }
+        public virtual ICollection<RecipeIngredient> RecipeIngredients { get; set; }
     }
 }

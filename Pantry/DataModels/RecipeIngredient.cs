@@ -15,8 +15,8 @@ namespace Pantry.Data.Models
         [Key, Column(Order = 1)]
         public int IngredientId { get; set; }
 
-        public Recipe Recipe { get; set; }
-        public Ingredient Ingredient { get; set; }
+        public virtual Recipe Recipe { get; set; }
+        public virtual Ingredient Ingredient { get; set; }
 
         //base is in milliliters
         public int Amount { get; set; }
