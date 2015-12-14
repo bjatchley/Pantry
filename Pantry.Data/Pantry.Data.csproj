@@ -79,7 +79,7 @@
     <Compile Include="DataModels\Account.cs" />
     <Compile Include="DataModels\AccountIngredient.cs" />
     <Compile Include="DataModels\Ingredient.cs" />
-    <Compile Include="DataModels\PantryContext.cs" />
+    <Compile Include="PantryContext.cs" />
     <Compile Include="DataModels\Recipe.cs" />
     <Compile Include="DataModels\RecipeIngredient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

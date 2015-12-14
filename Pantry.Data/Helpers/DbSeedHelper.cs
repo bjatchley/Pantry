@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Migrations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Pantry.Data.Models;
-
-namespace Pantry.Data.Helpers
+﻿namespace Pantry.Data.Helpers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using Data.Models;
+
     public static class DbSeedHelper
     {
         public static void SeedRecipeDatabase(PantryContext context)

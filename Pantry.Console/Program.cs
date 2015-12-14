@@ -1,6 +1,4 @@
-﻿
-
-namespace Pantry.Console
+﻿namespace Pantry.Console
 {
     using System;
     using System.Collections.Generic;

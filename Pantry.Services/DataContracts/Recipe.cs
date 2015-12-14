@@ -1,17 +1,20 @@
-﻿namespace Pantry.Data.Models
+﻿namespace Pantry.Services.DataContracts
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Runtime.Serialization;
     using System.Text;
     using System.Threading.Tasks;
 
+    [DataContract]
     public class Recipe
     {
+        [DataMember]
         public int Id { get; set; }
+        [DataMember]
         public string Name { get; set; }
-        public int AccountId { get; set; }
-        public virtual Account Account { get; set; }
-        public virtual ICollection<RecipeIngredient> RecipeIngredients { get; set; }
+        [DataMember]
+        public ICollection<RecipeIngredient> NecessaryIngredients { get; set; }
     }
 }
