@@ -10,10 +10,8 @@ namespace Pantry.Data.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public double CaloriesPerGram { get; set; }  
-        public double CaloriesPerMilliliter { get; set; } 
-        public double Density { get; set; }
         public bool IsDry { get; set; }
+        public bool HasUniqueBaseAmountType { get; set; }
         public virtual ICollection<AccountIngredient> AccountIngredients { get; set; }
         public virtual ICollection<RecipeIngredient> RecipeIngredients { get; set; }
     }

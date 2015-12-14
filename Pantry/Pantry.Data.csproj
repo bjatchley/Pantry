@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\DbSeedHelper.cs" />
     <Compile Include="Migrations\201512081850426_InitialCreate.cs" />
     <Compile Include="Migrations\201512081850426_InitialCreate.Designer.cs">
       <DependentUpon>201512081850426_InitialCreate.cs</DependentUpon>
@@ -57,6 +58,22 @@
     <Compile Include="Migrations\201512102123165_VirtualAddition.cs" />
     <Compile Include="Migrations\201512102123165_VirtualAddition.Designer.cs">
       <DependentUpon>201512102123165_VirtualAddition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512141508415_RemoveConversionFactors.cs" />
+    <Compile Include="Migrations\201512141508415_RemoveConversionFactors.Designer.cs">
+      <DependentUpon>201512141508415_RemoveConversionFactors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512141600522_AddAccountIDtoRecipe.cs" />
+    <Compile Include="Migrations\201512141600522_AddAccountIDtoRecipe.Designer.cs">
+      <DependentUpon>201512141600522_AddAccountIDtoRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512141646343_changeAmountToDecimal.cs" />
+    <Compile Include="Migrations\201512141646343_changeAmountToDecimal.Designer.cs">
+      <DependentUpon>201512141646343_changeAmountToDecimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512141754074_HasUniqueAmountBaseType.cs" />
+    <Compile Include="Migrations\201512141754074_HasUniqueAmountBaseType.Designer.cs">
+      <DependentUpon>201512141754074_HasUniqueAmountBaseType.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DataModels\Account.cs" />
@@ -80,6 +97,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512102123165_VirtualAddition.resx">
       <DependentUpon>201512102123165_VirtualAddition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512141508415_RemoveConversionFactors.resx">
+      <DependentUpon>201512141508415_RemoveConversionFactors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512141600522_AddAccountIDtoRecipe.resx">
+      <DependentUpon>201512141600522_AddAccountIDtoRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512141646343_changeAmountToDecimal.resx">
+      <DependentUpon>201512141646343_changeAmountToDecimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512141754074_HasUniqueAmountBaseType.resx">
+      <DependentUpon>201512141754074_HasUniqueAmountBaseType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

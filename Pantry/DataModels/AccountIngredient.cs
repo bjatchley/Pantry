@@ -18,8 +18,6 @@ namespace Pantry.Data.Models
         public virtual Account Account { get; set; }
         public virtual Ingredient Ingredient { get; set; }
 
-
-        //base unit is milliliters
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
     }
 }

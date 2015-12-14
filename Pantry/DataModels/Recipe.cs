@@ -10,6 +10,7 @@ namespace Pantry.Data.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public int AccountId { get; set; }
         public virtual Account Account { get; set; }
         public virtual ICollection<RecipeIngredient> RecipeIngredients { get; set; }
     }

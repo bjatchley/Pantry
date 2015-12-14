@@ -19,6 +19,6 @@ namespace Pantry.Data.Models
         public virtual Ingredient Ingredient { get; set; }
 
         //base is in milliliters
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
     }
 }
