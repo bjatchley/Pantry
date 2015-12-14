@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pantry.Data", "Pantry\Pantry.Data.csproj", "{B4533311-6441-43E3-B21C-9443A165BB13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pantry.Data", "Pantry.Data\Pantry.Data.csproj", "{B4533311-6441-43E3-B21C-9443A165BB13}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pantry.Console", "Pantry.Console\Pantry.Console.csproj", "{FF72C2E6-B106-4349-8D46-A7A0007B6BC6}"
 EndProject

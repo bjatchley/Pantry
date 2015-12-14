@@ -7,8 +7,8 @@
     <ProjectGuid>{B4533311-6441-43E3-B21C-9443A165BB13}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pantry</RootNamespace>
-    <AssemblyName>Pantry</AssemblyName>
+    <RootNamespace>Pantry.Data</RootNamespace>
+    <AssemblyName>Pantry.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

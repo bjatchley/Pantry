@@ -56,7 +56,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Pantry\Pantry.Data.csproj">
+    <ProjectReference Include="..\Pantry.Data\Pantry.Data.csproj">
       <Project>{b4533311-6441-43e3-b21c-9443a165bb13}</Project>
       <Name>Pantry.Data</Name>
     </ProjectReference>
