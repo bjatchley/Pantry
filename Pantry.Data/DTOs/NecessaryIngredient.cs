@@ -1,4 +1,4 @@
-﻿namespace Pantry.Services.DataContracts
+﻿namespace Pantry.Data.DTOs
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +7,7 @@
     using System.Text;
 
     [DataContract]
-    public class RecipeIngredient
+    public class NecessaryIngredient
     {
         [DataMember]
         public int RecipeId { get; set; }

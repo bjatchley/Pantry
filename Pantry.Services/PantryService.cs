@@ -5,32 +5,35 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using Pantry.Data.DTOs;
+    using Pantry.Data.Models;
     using Pantry.Services.Repositories;
 
     class PantryService : IPantryService
     {
+        
+        RecipeRepository _recipeRepository;
+        AccountRepository _accountRepository;
 
-        #region IPantryService Members
-
-        public IEnumerable<DataContracts.Recipe> GetRecipes()
+        public IQueryable<Recipe> GetRecipes()
         {
-            RecipeRepository recipeRepository = new RecipeRepository();
+            _recipeRepository = new RecipeRepository();
 
-            return recipeRepository.GetRecipes();
+            return _recipeRepository.Get();
         }
 
-        public IEnumerable<DataContracts.Account> GetAccounts()
+        public IQueryable<Account> GetAccounts()
         {
-            AccountRepository accountRepository = new AccountRepository();
+            _accountRepository = new AccountRepository();
 
-            return accountRepository.GetAccounts();
+            return _accountRepository.Get();
         }
 
-        public void AddIngredientToPantry(DataContracts.AccountIngredient accountIngredient)
+        public void AddIngredientToPantry(AvailableIngredient accountIngredient)
         {
-            throw new NotImplementedException();
+            
         }
 
-        #endregion
+
     }
 }

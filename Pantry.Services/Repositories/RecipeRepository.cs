@@ -8,19 +8,30 @@
     using System.Data.Entity;
     using Services;
     using Data;
+    using Bases;
+    using Pantry.Data.Models;
 
-    public class RecipeRepository
+    public class RecipeRepository : DataRepositoryBase<Recipe, PantryContext>, IRecipeRepository 
     {
-        PantryContext db = new PantryContext();
 
-        public IEnumerable<DataContracts.Recipe> GetRecipes()
+        protected override Recipe AddEntity(PantryContext entityContext, Recipe entity)
         {
-            return from p in db.RecipeSet
-                   select new DataContracts.Recipe
-                   {
-                       Name = p.Name,
-                       Id = p.Id
-                   };
+            return entityContext.RecipeSet.Add(entity);
+        }
+
+        protected override Recipe UpdateEntity(PantryContext entityContext, Recipe entity)
+        {
+            return entityContext.RecipeSet.Where(p => p.Id == entity.Id).FirstOrDefault();
+        }
+
+        protected override IQueryable<Recipe> GetEntities(PantryContext entityContext)
+        {
+            return entityContext.RecipeSet;
+        }
+
+        protected override Recipe GetEntity(PantryContext entityContext, int id)
+        {
+            return entityContext.RecipeSet.Where(p => p.Id == id).FirstOrDefault();
         }
     }
 }

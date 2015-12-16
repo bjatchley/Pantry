@@ -1,4 +1,4 @@
-﻿namespace Pantry.Services.DataContracts
+﻿namespace Pantry.Data.DTOs
 {
     using System;
     using System.Collections.Generic;
@@ -8,13 +8,19 @@
     using System.Threading.Tasks;
 
     [DataContract]
-    public class AccountIngredient
+    public class AvailableIngredient
     {
+        [DataMember]
         public int AccountId { get; set; }
+        [DataMember]
         public int IngredientId { get; set; }
+        [DataMember]
         public string Name { get; set; }
+        [DataMember]
         public bool IsDry { get; set; }
+        [DataMember]
         public bool HasUniqueBaseAmountType { get; set; }
+        [DataMember]
         public decimal Amount { get; set; }
     }
 }

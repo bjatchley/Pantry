@@ -10,9 +10,9 @@
 
     public class AccountIngredient
     {
-        [Key, Column(Order = 0)]
+        public int Id { get; set; }
         public int AccountId { get; set; }
-        [Key, Column(Order = 1)]
+        
         public int IngredientId { get; set; }
 
         public virtual Account Account { get; set; }

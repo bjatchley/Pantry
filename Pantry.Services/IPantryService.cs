@@ -6,16 +6,17 @@
     using System.ServiceModel;
     using System.Text;
     using System.Threading.Tasks;
-    using Pantry.Services.DataContracts;
+    using Pantry.Data.DTOs;
+    using Pantry.Data.Models;
 
     [ServiceContract]
     public interface IPantryService
     {
         [OperationContract]
-        IEnumerable<Recipe> GetRecipes();
+        IQueryable<Recipe> GetRecipes();
         [OperationContract]
-        IEnumerable<Account> GetAccounts();
+        IQueryable<Account> GetAccounts();
         [OperationContract]
-        void AddIngredientToPantry(AccountIngredient accountIngredient);
+        void AddIngredientToPantry(AvailableIngredient accountIngredient);
     }
 }

@@ -10,9 +10,9 @@
 
     public class RecipeIngredient
     {
-        [Key, Column(Order = 0)]
+        public int Id { get; set; }
+
         public int RecipeId { get; set; }
-        [Key, Column(Order = 1)]
         public int IngredientId { get; set; }
 
         public virtual Recipe Recipe { get; set; }
