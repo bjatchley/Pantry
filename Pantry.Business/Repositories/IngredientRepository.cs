@@ -12,9 +12,10 @@
     using Factories;
 
 
-    public class IngredientRepository : DataRepositoryBase<Ingredient, PantryContext>, IIngredientRepository
+    public class IngredientRepository : DataRepositoryBase<Ingredient, PantryContext>, IIngredientRepository, IDisposable
     {
         IRepositoryFactory _repositoryFactory;
+        PantryContext context = new PantryContext();
 
         public IngredientRepository(IRepositoryFactory repositoryFactory) 
         {
@@ -37,31 +38,29 @@
             Ingredient existingIngredient;
             AccountIngredient accountIngredientToInsert;
 
-            using (PantryContext context = new PantryContext())
+
+            existingIngredient = GetIngredientByName(availableIngredient.Name);
+
+            if (existingIngredient == null)
             {
-                existingIngredient = GetIngredientByName(availableIngredient.Name);
-
-                if (existingIngredient == null)
-                {
-                    existingIngredient = new Ingredient();
+                existingIngredient = new Ingredient();
  
-                    existingIngredient.IsDry = availableIngredient.IsDry;
-                    existingIngredient.HasUniqueBaseAmountType = availableIngredient.HasUniqueBaseAmountType;
-                    existingIngredient.Name = availableIngredient.Name;
+                existingIngredient.IsDry = availableIngredient.IsDry;
+                existingIngredient.HasUniqueBaseAmountType = availableIngredient.HasUniqueBaseAmountType;
+                existingIngredient.Name = availableIngredient.Name;
 
-                    context.IngredientSet.Add(existingIngredient);
-                    context.SaveChanges();
-                }
-
-                accountIngredientToInsert = new AccountIngredient();
-
-                accountIngredientToInsert.Amount = availableIngredient.Amount;
-                accountIngredientToInsert.IngredientId = existingIngredient.Id;
-
-                ingredientOwner.AccountIngredients.Add(accountIngredientToInsert);
-
+                context.IngredientSet.Add(existingIngredient);
                 context.SaveChanges();
             }
+
+            accountIngredientToInsert = new AccountIngredient();
+
+            accountIngredientToInsert.Amount = availableIngredient.Amount;
+            accountIngredientToInsert.IngredientId = existingIngredient.Id;
+
+            ingredientOwner.AccountIngredients.Add(accountIngredientToInsert);
+
+            context.SaveChanges();
 
             result.AccountId = ingredientOwner.Id;
             result.IngredientId = existingIngredient.Id;
@@ -76,10 +75,7 @@
 
         public Ingredient GetIngredientByName(string name)
         {
-            using (PantryContext context = new PantryContext())
-            {
-                return context.IngredientSet.Where(p => p.Name == name).FirstOrDefault();
-            }
+            return context.IngredientSet.Where(p => p.Name == name).FirstOrDefault();
         }
 
         #region Statements used by basic CRUD
@@ -93,7 +89,7 @@
             return entityContext.IngredientSet.Where(p => p.Id == entity.Id).FirstOrDefault();
         }
 
-        protected override IQueryable<Ingredient> GetEntities(PantryContext entityContext)
+        protected override IEnumerable<Ingredient> GetEntities(PantryContext entityContext)
         {
             return entityContext.IngredientSet;
         }
@@ -102,6 +98,16 @@
         {
             return entityContext.IngredientSet.Where(p => p.Id == id).FirstOrDefault();
         }
+        #endregion
+
+
+        #region IDisposable Members
+
+        void IDisposable.Dispose()
+        {
+            context.Dispose();
+        }
+
         #endregion
     }
 }

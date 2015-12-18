@@ -13,9 +13,9 @@
     public interface IPantryService
     {
         [OperationContract]
-        IQueryable<Recipe> GetRecipes();
+        IEnumerable<Recipe> GetRecipes();
         [OperationContract]
-        IQueryable<Account> GetAccounts();
+        IEnumerable<Account> GetAccounts();
         [OperationContract]
         void AddIngredientToPantry(AvailableIngredient accountIngredient);
     }

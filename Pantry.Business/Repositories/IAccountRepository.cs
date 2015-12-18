@@ -8,7 +8,7 @@
     using Data.Models;
     using Common.Base.Interfaces;
 
-    public interface IAccountRepository : IDataRepository<Account>
+    public interface IAccountRepository : IDataRepository<Account>, IDisposable
     {
 
     }

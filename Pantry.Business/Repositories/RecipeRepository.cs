@@ -10,8 +10,9 @@
     using Common.Base.Classes;
     using Data.Models;
 
-    public class RecipeRepository : DataRepositoryBase<Recipe, PantryContext>, IRecipeRepository 
+    public class RecipeRepository : DataRepositoryBase<Recipe, PantryContext>, IRecipeRepository, IDisposable
     {
+        PantryContext context = new PantryContext();
 
         protected override Recipe AddEntity(PantryContext entityContext, Recipe entity)
         {
@@ -23,7 +24,7 @@
             return entityContext.RecipeSet.Where(p => p.Id == entity.Id).FirstOrDefault();
         }
 
-        protected override IQueryable<Recipe> GetEntities(PantryContext entityContext)
+        protected override IEnumerable<Recipe> GetEntities(PantryContext entityContext)
         {
             return entityContext.RecipeSet;
         }
@@ -32,5 +33,14 @@
         {
             return entityContext.RecipeSet.Where(p => p.Id == id).FirstOrDefault();
         }
+
+        #region IDisposable Members
+
+        void IDisposable.Dispose()
+        {
+            context.Dispose();
+        }
+
+        #endregion
     }
 }

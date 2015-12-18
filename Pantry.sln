@@ -15,6 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pantry.Common", "Pantry.Com
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pantry.IISHost", "Pantry.IISHost\Pantry.IISHost.csproj", "{B4B611C6-3DA2-4DB2-BE41-3B1074C961A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pantry.Client", "Pantry.Client\Pantry.Client.csproj", "{F6A454CC-D01D-4582-A98C-6FDCF2309B1D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B4B611C6-3DA2-4DB2-BE41-3B1074C961A5} = {B4B611C6-3DA2-4DB2-BE41-3B1074C961A5}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +50,10 @@ Global
 		{B4B611C6-3DA2-4DB2-BE41-3B1074C961A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4B611C6-3DA2-4DB2-BE41-3B1074C961A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4B611C6-3DA2-4DB2-BE41-3B1074C961A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6A454CC-D01D-4582-A98C-6FDCF2309B1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A454CC-D01D-4582-A98C-6FDCF2309B1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A454CC-D01D-4582-A98C-6FDCF2309B1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A454CC-D01D-4582-A98C-6FDCF2309B1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

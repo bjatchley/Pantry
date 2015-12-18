@@ -29,17 +29,18 @@
             _repositoryFactory = repositoryFactory;
         }
 
-        public IQueryable<Recipe> GetRecipes()
+        public IEnumerable<Recipe> GetRecipes()
         {
             IRecipeRepository recipeRepository = _repositoryFactory.GetRepository<IRecipeRepository>();
             
             return recipeRepository.Get();
         }
 
-        public IQueryable<Account> GetAccounts()
+        public IEnumerable<Account> GetAccounts()
         {
             IAccountRepository accountRepository = _repositoryFactory.GetRepository<IAccountRepository>();
-            return accountRepository.Get();
+            var tempList = accountRepository.Get().ToList();
+            return tempList.ToList();
         }
 
         [OperationBehavior(TransactionScopeRequired=true)]
@@ -48,7 +49,6 @@
             IIngredientRepository ingredientRepository = _repositoryFactory.GetRepository<IIngredientRepository>();
             ingredientRepository.AddAvailableIngredient(availableIngredient);
         }
-
 
     }
 }

@@ -1,12 +1,14 @@
 ﻿namespace Pantry.Common.Base.Interfaces
 {
+    using System;
+    using System.Collections.Generic;
     using System.Linq;
 
-    public interface IDataRepository
+    public interface IDataRepository : IDisposable
     {
     }
 
-    public interface IDataRepository<T> : IDataRepository
+    public interface IDataRepository<T> : IDisposable, IDataRepository
         where T : class, new()
     {
         T Add(T entity);
@@ -17,7 +19,7 @@
 
         T Update(T Entity);
 
-        IQueryable<T> Get();
+        IEnumerable<T> Get();
 
         T Get(int id);
     }

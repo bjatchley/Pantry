@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c50f1ccf-4b06-49ac-8f6a-66da1f687c5e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50823/PantryService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PantryService.xsd" MetadataType="Schema" ID="0e4f7431-d20d-4a67-9b81-bfeda511582b" SourceId="1" SourceUrl="http://localhost:50823/PantryService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PantryService1.xsd" MetadataType="Schema" ID="66459c72-8c27-4232-b99d-75ee416c4b68" SourceId="1" SourceUrl="http://localhost:50823/PantryService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PantryService2.xsd" MetadataType="Schema" ID="360078e2-3474-4b7a-a9ed-afe0ccf12603" SourceId="1" SourceUrl="http://localhost:50823/PantryService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PantryService3.xsd" MetadataType="Schema" ID="6cb4f531-e552-4da1-b057-d5429c4019ad" SourceId="1" SourceUrl="http://localhost:50823/PantryService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PantryService.wsdl" MetadataType="Wsdl" ID="02d572d4-1ca0-4c0f-acd2-4d5a227d5a51" SourceId="1" SourceUrl="http://localhost:50823/PantryService.svc?wsdl" />
+    <MetadataFile FileName="PantryService.disco" MetadataType="Disco" ID="1dcad91d-0965-4eb3-ae92-693b33caa768" SourceId="1" SourceUrl="http://localhost:50823/PantryService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
