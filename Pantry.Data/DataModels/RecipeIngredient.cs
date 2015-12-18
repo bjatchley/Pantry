@@ -10,9 +10,11 @@
 
     public class RecipeIngredient
     {
+        [Key]
         public int Id { get; set; }
-
+        [ForeignKey("Recipe")]
         public int RecipeId { get; set; }
+        [ForeignKey("Ingredient")]
         public int IngredientId { get; set; }
 
         public virtual Recipe Recipe { get; set; }

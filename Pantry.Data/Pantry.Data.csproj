@@ -78,6 +78,14 @@
     <Compile Include="Migrations\201512141754074_HasUniqueAmountBaseType.Designer.cs">
       <DependentUpon>201512141754074_HasUniqueAmountBaseType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512181604306_latest.cs" />
+    <Compile Include="Migrations\201512181604306_latest.Designer.cs">
+      <DependentUpon>201512181604306_latest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512181611549_KeyChanges.cs" />
+    <Compile Include="Migrations\201512181611549_KeyChanges.Designer.cs">
+      <DependentUpon>201512181611549_KeyChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DataModels\Account.cs" />
     <Compile Include="DataModels\AccountIngredient.cs" />
@@ -112,6 +120,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512141754074_HasUniqueAmountBaseType.resx">
       <DependentUpon>201512141754074_HasUniqueAmountBaseType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512181604306_latest.resx">
+      <DependentUpon>201512181604306_latest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512181611549_KeyChanges.resx">
+      <DependentUpon>201512181611549_KeyChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

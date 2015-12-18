@@ -4,17 +4,17 @@ namespace Pantry.Data.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using Pantry.Data.Models;
-    using Pantry.Data.Helpers;
+    using Models;
+    using Helpers;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Pantry.Data.PantryContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<PantryContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Pantry.Data.PantryContext context)
+        protected override void Seed(PantryContext context)
         {
             DbSeedHelper.SeedRecipeDatabase(context);
         }

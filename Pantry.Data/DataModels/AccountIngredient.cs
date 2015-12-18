@@ -10,9 +10,11 @@
 
     public class AccountIngredient
     {
+        [Key]
         public int Id { get; set; }
+        [ForeignKey("Account")]
         public int AccountId { get; set; }
-        
+        [ForeignKey("Ingredient")]
         public int IngredientId { get; set; }
 
         public virtual Account Account { get; set; }
