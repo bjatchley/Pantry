@@ -11,6 +11,8 @@
     public class AvailableIngredient
     {
         [DataMember]
+        public int Id { get; set; }
+        [DataMember]
         public int AccountId { get; set; }
         [DataMember]
         public int IngredientId { get; set; }

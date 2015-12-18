@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-
-namespace Pantry.Services.Utils
+﻿namespace Pantry.Common.Utils
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+
     public static class SimpleMapper
     {
         public static void PropertyMap<T, U>(T source, U destination)

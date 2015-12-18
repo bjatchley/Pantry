@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pantry.Business", "Pantry.B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pantry.Services", "Pantry.Services\Pantry.Services.csproj", "{E8B6BD9A-BB9A-401B-B5D6-A9C058989419}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pantry.Common", "Pantry.Common\Pantry.Common.csproj", "{2346CD09-3C7C-4430-8E65-4011ABFF6985}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{E8B6BD9A-BB9A-401B-B5D6-A9C058989419}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8B6BD9A-BB9A-401B-B5D6-A9C058989419}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8B6BD9A-BB9A-401B-B5D6-A9C058989419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2346CD09-3C7C-4430-8E65-4011ABFF6985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2346CD09-3C7C-4430-8E65-4011ABFF6985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2346CD09-3C7C-4430-8E65-4011ABFF6985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2346CD09-3C7C-4430-8E65-4011ABFF6985}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

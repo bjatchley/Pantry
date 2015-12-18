@@ -10,6 +10,8 @@
     public class NecessaryIngredient
     {
         [DataMember]
+        public int Id { get; set; }
+        [DataMember]
         public int RecipeId { get; set; }
         [DataMember]
         public int IngredientId { get; set; }

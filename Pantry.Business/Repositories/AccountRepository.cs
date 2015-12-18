@@ -1,4 +1,4 @@
-﻿namespace Pantry.Services.Repositories
+﻿namespace Pantry.Business.Repositories
 {
     using System;
     using System.Collections.Generic;
@@ -6,13 +6,12 @@
     using System.Text;
     using System.Threading.Tasks;
     using System.Data.Entity;
-    using Services;
     using Data;
     using Data.Models;
-    using Interfaces;
-    using Bases;
+    using Common.Base.Interfaces;
+    using Common.Base.Classes;
 
-    public class AccountRepository : DataRepositoryBase<Data.Models.Account, Data.PantryContext>
+    public class AccountRepository : DataRepositoryBase<Data.Models.Account, Data.PantryContext>, IAccountRepository
     {
 
         protected override Account AddEntity(PantryContext entityContext, Account entity)

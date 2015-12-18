@@ -5,33 +5,48 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-    using Pantry.Data.DTOs;
-    using Pantry.Data.Models;
-    using Pantry.Services.Repositories;
+    using Data;
+    using Data.DTOs;
+    using Data.Models;
+    using Business.Repositories;
+    using Business.Loaders;
+    using Business.Factories;
+    using System.ServiceModel;
 
-    class PantryService : IPantryService
+    [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerCall)]
+    public class PantryService : IPantryService
     {
-        
-        RecipeRepository _recipeRepository;
-        AccountRepository _accountRepository;
+
+        IRepositoryFactory _repositoryFactory;
+
+        public PantryService()
+        {
+            _repositoryFactory = new RepositoryFactory();
+        }
+
+        public PantryService(IRepositoryFactory repositoryFactory)
+        {
+            _repositoryFactory = repositoryFactory;
+        }
 
         public IQueryable<Recipe> GetRecipes()
         {
-            _recipeRepository = new RecipeRepository();
-
-            return _recipeRepository.Get();
+            IRecipeRepository recipeRepository = _repositoryFactory.GetRepository<IRecipeRepository>();
+            
+            return recipeRepository.Get();
         }
 
         public IQueryable<Account> GetAccounts()
         {
-            _accountRepository = new AccountRepository();
-
-            return _accountRepository.Get();
+            IAccountRepository accountRepository = _repositoryFactory.GetRepository<IAccountRepository>();
+            return accountRepository.Get();
         }
 
-        public void AddIngredientToPantry(AvailableIngredient accountIngredient)
+        [OperationBehavior(TransactionScopeRequired=true)]
+        public void AddIngredientToPantry(AvailableIngredient availableIngredient)
         {
-            
+            IIngredientRepository ingredientRepository = _repositoryFactory.GetRepository<IIngredientRepository>();
+            ingredientRepository.AddAvailableIngredient(availableIngredient);
         }
 
 

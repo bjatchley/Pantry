@@ -1,4 +1,4 @@
-﻿namespace Pantry.Services.Repositories
+﻿namespace Pantry.Business.Repositories
 {
     using System;
     using System.Collections.Generic;
@@ -6,10 +6,9 @@
     using System.Text;
     using System.Threading.Tasks;
     using System.Data.Entity;
-    using Services;
     using Data;
-    using Bases;
-    using Pantry.Data.Models;
+    using Common.Base.Classes;
+    using Data.Models;
 
     public class RecipeRepository : DataRepositoryBase<Recipe, PantryContext>, IRecipeRepository 
     {
